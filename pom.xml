@@ -33,7 +33,7 @@
 			<scope>test</scope>
 		</dependency>
 
-	</dependencies>
+    </dependencies>
 
 	<!-- Committing and updating changes through Maven, by using below mvn command. 
 		For Commiting mvn -Dmessage="Updated using maven" scm:checkin For updating 
@@ -58,7 +58,7 @@
 	      <!-- Build an executable JAR -->
 	      <groupId>org.apache.maven.plugins</groupId>
 	      <artifactId>maven-jar-plugin</artifactId>
-	      <version>3.1.0</version>
+	      <version>3.2.0</version>
 	      <configuration>
 	        <archive>
 	          <manifest>
@@ -69,6 +69,15 @@
 	        </archive>
 	      </configuration>
 	    </plugin>
+		<plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-compiler-plugin</artifactId> 
+	      <version>3.8.0</version>   
+		    <configuration>
+                    <source>10</source>
+                    <target>10</target>
+            </configuration>        
+        </plugin>
 	  </plugins>
 	</build>
 	
